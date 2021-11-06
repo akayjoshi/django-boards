@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(238, 231, 231);
+  }
+  
+  .logo {
+    font-family: 'Peralta', cursive;
+  }
+  
+  .logo a{
+    color: rgba(0,0,0,.9);
+  }
+
+
+ .logo a:hover,
+ .logo a:active,
+ .card-footer a{
+   text-decoration: none;
+ }
+
+  a{
+  text-decoration: none;
+ }

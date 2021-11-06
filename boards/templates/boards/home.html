@@ -1,0 +1,29 @@
+{% extends 'boards/base.html' %} {% block breadcrumb %}
+<li class="breadcrumb-item active">Boards</li>
+{% endblock %} {% block content %}
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th>Board</th>
+      <th>Posts</th>
+      <th>Topics</th>
+      <th>Last Post</th>
+    </tr>
+  </thead>
+  <tbody class="table-light">
+    {% for board in boards %}
+    <tr>
+      <td>
+        <!-- checks URLCong for name with arg -->
+        <a href="{% url 'board_topics' board.id %}">{{ board.name }}</a>
+        <small class="text-muted d-block">{{ board.description }}</small>
+      </td>
+      <td class="align-middle">0</td>
+      <td class="align-middle">0</td>
+      <td></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
